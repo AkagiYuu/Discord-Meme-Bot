@@ -26,6 +26,7 @@ function main() {
 
     client.on("message", (message) => {
         if(message.content.match(/^dm.+/)) {
+            console.log(message.author)
             const command = message.content.replace(/^dm.{1}/,'')
             if(command === 'help') {
                 message.reply(helpList)
